@@ -1,0 +1,1 @@
+# sc22_sycl_portability_trick_tip
