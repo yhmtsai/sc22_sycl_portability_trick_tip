@@ -1,6 +1,8 @@
 #ifndef DPCPP_DIM3_DP_HPP_
 #define DPCPP_DIM3_DP_HPP_
 
+// This file is slightly changed from Ginkgo project
+// Please check with https://github.com/ginkgo-project/ginkgo)
 
 #include <CL/sycl.hpp>
 

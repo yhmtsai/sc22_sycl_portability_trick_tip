@@ -1,3 +1,9 @@
+#ifndef DPCPP_COOPERATIVE_GROUPS_DP_HPP_
+#define DPCPP_COOPERATIVE_GROUPS_DP_HPP_
+
+// This file does not fully support subgroup and it's just a simple one implementation.
+// Please check with https://github.com/ginkgo-project/ginkgo) for more support on subgroup.
+
 #include <dpct/dpct.hpp>
 
 template <unsigned Size>
@@ -54,3 +60,6 @@ __dpct_inline__ sycl::nd_item<3> this_thread_block(sycl::nd_item<3>& item_ct1) {
 
 template <int subgroup_size>
 using tiled_partition = thread_block_tile<subgroup_size>;
+
+
+#endif // DPCPP_COOPERATIVE_GROUPS_DP_HPP_
