@@ -37,7 +37,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <type_traits>
 
 
-#include <fake_interface/cooperative_groups.cuh>
+#include <additional_header/cooperative_groups.cuh>
 
 
 template <unsigned Size, typename Group>
