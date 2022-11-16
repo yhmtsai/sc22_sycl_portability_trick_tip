@@ -1,5 +1,3 @@
-#define GET_QUEUE 0
-
 template<typename ValueType>
 __global__ void dynamic_shared_memory(ValueType* val) {
     __shared__ ValueType static_shared[32];
