@@ -2,7 +2,9 @@
 
 template <typename ValueType>
 __global__ void dummy(int num, ValueType* val) {
+    auto tid = get_index();
     val[threadIdx.x] += 1;
+    
 }
 
 int main () {

@@ -4,14 +4,16 @@
 #include <cooperative_groups.h>
 
 
+__device__ int get_index() {
+    return threadIdx.x;
+}
+
 template <typename ValueType, int subwarp_size = 16>
 __global__ void reduction_kernel(const int num, ValueType* val)
 {
     auto thread_block = cooperative_groups::this_thread_block();
     auto subwarp =
         cooperative_groups::tiled_partition<subwarp_size>(thread_block);
-    // block_size only be 64
-    __shared__ ValueType tmp[64];
     auto tid = threadIdx.x;
     auto local_data = val[tid];
 #pragma unroll
